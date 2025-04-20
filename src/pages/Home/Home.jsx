@@ -4,6 +4,7 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { Cover } from "@/components/ui/cover";
 import Example from "@/components/Header";
 import { GridBackgroundDemo } from "@/components/ui/GridBackgroundDemo";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -113,21 +114,32 @@ function Home() {
           </div>
         </div>
         <div className="flex justify-center gap-6 mt-8">
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-gray-100 text-black font-semibold rounded-lg hover:bg-black hover:text-white"
-          >
-            Get Started
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-900"
-          >
-            Know More
-          </motion.button>
-        </div>
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-6 py-3 bg-gray-100 text-black font-semibold rounded-lg hover:bg-black hover:text-white"
+  >
+    Get Started
+  </motion.button>
+
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-900"
+  >
+    Know More
+  </motion.button>
+
+  <Link to="/predict">
+    <motion.button
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+    >
+      Try Prediction
+    </motion.button>
+  </Link>
+</div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
